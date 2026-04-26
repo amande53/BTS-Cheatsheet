@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en" data-theme="bts">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amanda Cheat Sheet 💜</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <canvas id="particles"></canvas>
+    <div class="liquid-transition"></div>
+    <nav class="nav">
+      <h2 class="logo">💜 Amanda’s Cheat Sheet</h2>
+
+      <div class="nav__links">
+        <!-- THEME -->
+        <select id="theme-select" class="theme-toggle">
+          <optgroup label="Solo">
+            <option value="hope-world">Hope World</option>
+            <option value="jack-box">Jack In The Box</option>
+            <option value="jack-hope">Jack In The Box Hope Edition</option>
+            <option value="astronaut">The Astronaut</option>
+            <option value="indigo">Indigo</option>
+            <option value="rpwp">RPWP</option>
+            <option value="agust-d">Agust D</option>
+            <option value="d-day">D-DAY</option>
+            <option value="face">FACE</option>
+            <option value="muse">MUSE</option>
+            <option value="golden">GOLDEN</option>
+            <option value="layover">Layover</option>
+          </optgroup>
+
+          <optgroup label="Group">
+            <option value="arirang">ARIRANG</option>
+            <option value="dark-wild">Dark & Wild</option>
+            <option value="hyyh">HYYH</option>
+            <option value="wings">WINGS</option>
+            <option value="love-yourself">Love Yourself</option>
+            <option value="mots">Map of the Soul</option>
+            <option value="be">BE</option>
+            <option value="proof">Proof</option>
+          </optgroup>
+        </select>
+
+        <!-- BIAS SELECT (NEW ✨) -->
+        <select id="bias-select" class="theme-toggle">
+          <option value="jhope">🐿️ J-Hope</option>
+          <option value="jin">🐹 Jin</option>
+          <option value="rm">🐨 RM</option>
+          <option value="suga">🐱 SUGA</option>
+          <option value="jimin">🐥 Jimin</option>
+          <option value="v">🐯 V</option>
+          <option value="jk">🐰 Jungkook</option>
+        </select>
+
+        <!-- BUTTONS -->
+        <button id="bias-mode" class="bias-button">💜 Bias</button>
+        <button id="music-mode" class="bias-button">🎧 Music</button>
+        <button id="era-mode" class="bias-button">🎬 Era</button>
+      </div>
+    </nav>
+
+    <div id="era-indicator">🎬 Era Mode</div>
+
+    <!-- HERO / START -->
+    <header class="hero era-section" data-era="bts">
+      <div class="hero__content">
+        <p class="eyebrow">ERA MODE</p>
+        <h1 class="bora-title">BTS Cheat Sheet</h1>
+        <p class="hero__text">Scroll to explore BTS eras 💜</p>
+      </div>
+    </header>
+
+    <!-- HOPE WORLD -->
+    <section class="section era-section" data-era="hope-world">
+      <h2 class="section__title">Hope World</h2>
+
+      <div class="shortcut-grid">
+        <div class="shortcut-card">
+          <span class="gradtext-demo">gradtext</span>
+          <p>Gradient text effect</p>
+        </div>
+
+        <div class="shortcut-card softglow-demo">
+          <code>softglow</code>
+          <p>Soft glowing shadow</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WINGS -->
+    <section class="section era-section" data-era="wings">
+      <h2 class="section__title">Wings</h2>
+
+      <div class="shortcut-grid">
+        <div class="shortcut-card neonhover-demo">
+          <code>neonhover</code>
+          <p>Hover glow effect</p>
+        </div>
+
+        <div class="shortcut-card glowborder-demo">
+          <code>glowborder</code>
+          <p>Glowing border</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOVE YOURSELF -->
+    <section class="section era-section" data-era="love-yourself">
+      <h2 class="section__title">Love Yourself</h2>
+
+      <div class="shortcut-grid">
+        <div class="shortcut-card pulseglow-demo">
+          <code>pulseglow</code>
+          <p>Pulsing glow animation</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP OF THE SOUL -->
+    <section class="section era-section" data-era="mots">
+      <h2 class="section__title">Map of the Soul</h2>
+
+      <div class="shortcut-grid">
+        <div class="shortcut-card">
+          <span class="gradtext-demo">gradtext</span>
+          <p>Holographic gradient text</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOLDEN -->
+    <section class="section era-section" data-era="golden">
+      <h2 class="section__title">Golden</h2>
+
+      <div class="shortcut-grid">
+        <div class="shortcut-card">
+          <span class="gradtext-demo">gradtext</span>
+          <p>Luxury gradient shimmer</p>
+        </div>
+      </div>
+    </section>
+
+    <header class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">HTML + CSS Shortcut Library</p>
+        <h1 class="bora-title">Coding Cheat Sheet</h1>
+        <p class="hero__text">
+          A quick reference for my custom VS Code snippets and shortcuts.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <h2 class="section__title">HTML Components</h2>
+
+        <div class="shortcut-grid">
+          <div class="shortcut-card">
+            <code>nav</code>
+            <p>Main navigation bar for the top menu of a website.</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>hero</code>
+            <p>Intro section with headline, description, and button.</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>sec</code>
+            <p>Basic content section used to organize page content.</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>pcard</code>
+            <p>Reusable card for showing a project or featured item.</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>ft</code>
+            <p>Footer area with links, socials, and copyright info.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">CSS Layout</h2>
+
+        <div class="shortcut-grid">
+          <div class="shortcut-card">
+            <code>df</code>
+            <p>display: flex;</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>fc</code>
+            <p>display flex + center horizontally and vertically.</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>fcc</code>
+            <p>flex column layout + center everything.</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>fdc</code>
+            <p>flex-direction: column;</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>fdr</code>
+            <p>flex-direction: row;</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>fw</code>
+            <p>flex-wrap: wrap;</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>jcc</code>
+            <p>justify-content: center;</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>aic</code>
+            <p>align-items: center;</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>tac</code>
+            <p>text-align: center;</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>mauto</code>
+            <p>margin: 0 auto;</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">Spacing</h2>
+
+        <div class="shortcut-grid">
+          <div class="shortcut-card">
+            <code>gap</code>
+            <p>gap between items</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>pad</code>
+            <p>padding: 24px;</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>mar</code>
+            <p>margin: 24px;</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>px</code>
+            <p>horizontal padding</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>py</code>
+            <p>vertical padding</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>secpad</code>
+            <p>section padding</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">Style</h2>
+
+        <div class="shortcut-grid">
+          <div class="shortcut-card">
+            <code>br</code>
+            <p>border-radius: 8px;</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>card</code>
+            <p>Creates a styled card with padding, radius, and glow.</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>btn</code>
+            <p>Creates a gradient button style.</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>neon</code>
+            <p>Creates glowing neon text.</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code class="gradtext-demo">gradtext</code>
+            <p>Gradient text effect.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">Selector Blocks</h2>
+
+        <div class="shortcut-grid">
+          <div class="shortcut-card">
+            <code>.</code>
+            <p>Creates a CSS class block.</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>#</code>
+            <p>Creates a CSS ID block.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">Effects</h2>
+
+        <div class="shortcut-grid">
+          <div class="shortcut-card softglow-demo">
+            <code>softglow</code>
+            <p>Soft pink glow shadow.</p>
+          </div>
+
+          <div class="shortcut-card neonhover-demo">
+            <code>neonhover</code>
+            <p>Hover lift with neon glow.</p>
+          </div>
+
+          <div class="shortcut-card glowborder-demo">
+            <code>glowborder</code>
+            <p>Glowing mint border.</p>
+          </div>
+
+          <div class="shortcut-card pulseglow-demo">
+            <code>pulseglow</code>
+            <p>Animated pulsing glow.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">Advanced Design</h2>
+
+        <div class="shortcut-grid">
+          <div class="shortcut-card">
+            <code>bgdream</code>
+            <p>Animated dreamy gradient background.</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>glassnav</code>
+            <p>Glassy sticky navbar effect.</p>
+          </div>
+
+          <div class="shortcut-card">
+            <code>glasscard</code>
+            <p>Frosted glass container card.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Amanda Anderson 💜</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+  <canvas id="particles"></canvas>
+<div class="liquid-transition"></div>
+</html>

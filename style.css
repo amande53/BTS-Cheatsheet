@@ -1,0 +1,1495 @@
+/* =========================
+   💜 RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Fira Code", monospace;
+  background:
+    radial-gradient(
+      circle at top left,
+      color-mix(in srgb, var(--pink) 22%, transparent),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at top right,
+      color-mix(in srgb, var(--purple) 24%, transparent),
+      transparent 35%
+    ),
+    linear-gradient(135deg, var(--bg), var(--bg-soft));
+  color: var(--text);
+  overflow-x: hidden;
+  transition:
+    background 0.4s ease,
+    color 0.4s ease;
+}
+
+/* =========================
+   🎨 THEMES
+========================= */
+
+:root,
+html[data-theme="bts"] {
+  --bg: #0f001a;
+  --bg-soft: #1a0033;
+  --text: #f5f3ff;
+  --muted: #cbb6ff;
+  --pink: #ff4fd8;
+  --purple: #6a0dad;
+  --mint: #79ffe1;
+  --card: rgba(255, 255, 255, 0.08);
+  --border: rgba(179, 136, 255, 0.25);
+  --shadow: 0 0 24px rgba(255, 79, 216, 0.25);
+}
+
+/* J-HOPE — HOPE WORLD */
+html[data-theme="hope-world"] {
+  --bg: #ff1744;
+  --bg-soft: #ff5e00;
+  --text: #ffffff;
+  --muted: #ffe082;
+  --pink: #ffd600;
+  --purple: #7c4dff;
+  --mint: #00e676;
+  --card: rgba(255, 255, 255, 0.12);
+  --border: rgba(0, 0, 0, 0.25);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* J-HOPE — JACK IN THE BOX */
+html[data-theme="jack-box"] {
+  --bg: #e1062b;
+  --bg-soft: #b80422;
+  --text: #ffffff;
+  --muted: #ffd6dc;
+  --pink: #00c853;
+  --purple: #7c4dff;
+  --mint: #00bcd4;
+  --card: rgba(255, 255, 255, 0.12);
+  --border: rgba(0, 0, 0, 0.25);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* J-HOPE — JACK IN THE BOX HOPE EDITION */
+html[data-theme="jack-hope"] {
+  --bg: #000000;
+  --bg-soft: #0a0a0a;
+  --text: #ffffff;
+  --muted: #bdbdbd;
+  --pink: #ff2d75;
+  --purple: #00cfff;
+  --mint: #ffffff;
+  --card: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 45, 117, 0.35);
+  --shadow: 0 0 25px rgba(255, 45, 117, 0.25);
+}
+
+/* JIN — THE ASTRONAUT */
+html[data-theme="astronaut"] {
+  --bg: #071026;
+  --bg-soft: #1b2f66;
+  --text: #f0f6ff;
+  --muted: #b7c7ff;
+  --pink: #7aa2ff;
+  --purple: #4f6cff;
+  --mint: #d6e6ff;
+  --card: rgba(255, 255, 255, 0.08);
+  --border: rgba(122, 162, 255, 0.3);
+  --shadow: 0 0 25px rgba(122, 162, 255, 0.3);
+}
+
+/* RM — INDIGO */
+html[data-theme="indigo"] {
+  --bg: #eee8dc;
+  --bg-soft: #c9c0ae;
+  --text: #1f2933;
+  --muted: #5f6f7a;
+  --pink: #8a6b4f;
+  --purple: #1f4e79;
+  --mint: #7f9c8d;
+  --card: rgba(255, 255, 255, 0.72);
+  --border: rgba(31, 78, 121, 0.25);
+  --shadow: 0 10px 25px rgba(31, 78, 121, 0.16);
+}
+
+/* RM — RPWP */
+html[data-theme="rpwp"] {
+  --bg: #e7e1d5;
+  --bg-soft: #beb5a8;
+  --text: #111111;
+  --muted: #555555;
+  --pink: #d64a2f;
+  --purple: #315f52;
+  --mint: #c7a83a;
+  --card: rgba(255, 255, 255, 0.65);
+  --border: rgba(47, 93, 80, 0.28);
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
+}
+
+/* SUGA — AGUST D */
+html[data-theme="agust-d"] {
+  --bg: #f2f2f2;
+  --bg-soft: #cfcfcf;
+  --text: #111111;
+  --muted: #5f5f5f;
+  --pink: #111111;
+  --purple: #4a4a4a;
+  --mint: #6aa7d8;
+  --card: rgba(255, 255, 255, 0.72);
+  --border: rgba(17, 17, 17, 0.22);
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+}
+
+/* SUGA — D-DAY */
+html[data-theme="d-day"] {
+  --bg: #121212;
+  --bg-soft: #1e1e1e;
+  --text: #e6e6e6;
+  --muted: #9a9a9a;
+  --pink: #cfcfcf;
+  --purple: #2c2c2c;
+  --mint: #a6a6a6;
+  --card: rgba(255, 255, 255, 0.06);
+  --border: rgba(200, 200, 200, 0.18);
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* JIMIN — FACE */
+html[data-theme="face"] {
+  --bg: #f5f5f5;
+  --bg-soft: #e4e4e4;
+  --text: #1a1a1a;
+  --muted: #8a8a8a;
+  --pink: #f2c6cc;
+  --purple: #bdbdbd;
+  --mint: #d9d9d9;
+  --card: rgba(255, 255, 255, 0.85);
+  --border: rgba(0, 0, 0, 0.08);
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* JIMIN — MUSE */
+html[data-theme="muse"] {
+  --bg: #ffd54f;
+  --bg-soft: #ffb300;
+  --text: #1a1a1a;
+  --muted: #6a4a00;
+  --pink: #ff7043;
+  --purple: #7c4dff;
+  --mint: #26c6da;
+  --card: rgba(255, 255, 255, 0.75);
+  --border: rgba(0, 0, 0, 0.15);
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* JUNGKOOK — GOLDEN */
+html[data-theme="golden"] {
+  --bg: #f4efe4;
+  --bg-soft: #d8c8a6;
+  --text: #13283a;
+  --muted: #8a7440;
+  --pink: #b88a2c;
+  --purple: #12324a;
+  --mint: #0f4a3a;
+  --card: rgba(255, 250, 238, 0.78);
+  --border: rgba(184, 138, 44, 0.35);
+  --shadow: 0 10px 30px rgba(18, 50, 74, 0.18);
+}
+
+/* V — LAYOVER */
+html[data-theme="layover"] {
+  --bg: #e9dcc8;
+  --bg-soft: #d4c1a3;
+  --text: #2a2118;
+  --muted: #7a6a58;
+  --pink: #7e57c2;
+  --purple: #2e7d32;
+  --mint: #1976d2;
+  --card: rgba(255, 248, 235, 0.88);
+  --border: rgba(122, 106, 88, 0.25);
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* BTS — ARIRANG */
+html[data-theme="arirang"] {
+  --bg: #f5f5f5;
+  --bg-soft: #e4e4e4;
+  --text: #1a1a1a;
+  --muted: #7a7a7a;
+  --pink: #b71c1c;
+  --purple: #4a4a4a;
+  --mint: #d4af37;
+  --card: rgba(255, 255, 255, 0.85);
+  --border: rgba(0, 0, 0, 0.08);
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* BTS — DARK & WILD */
+html[data-theme="dark-wild"] {
+  --bg: #050505;
+  --bg-soft: #171717;
+  --text: #f5f5f5;
+  --muted: #b5b5b5;
+  --pink: #d90429;
+  --purple: #2b2d42;
+  --mint: #edf2f4;
+  --card: rgba(255, 255, 255, 0.06);
+  --border: rgba(217, 4, 41, 0.35);
+  --shadow: 0 0 24px rgba(217, 4, 41, 0.3);
+}
+
+/* BTS — HYYH */
+html[data-theme="hyyh"] {
+  --bg: #ffeef5;
+  --bg-soft: #ffd6e0;
+  --text: #3a1c2e;
+  --muted: #a86d8a;
+  --pink: #ff7eb3;
+  --purple: #b388ff;
+  --mint: #a0ffe6;
+  --card: rgba(255, 255, 255, 0.72);
+  --border: rgba(255, 126, 179, 0.3);
+  --shadow: 0 10px 30px rgba(255, 126, 179, 0.24);
+}
+
+/* BTS — WINGS */
+html[data-theme="wings"] {
+  --bg: #0a0a0a;
+  --bg-soft: #1a1a1a;
+  --text: #f5f5f5;
+  --muted: #9a9a9a;
+  --pink: #ffffff;
+  --purple: #3a3a3a;
+  --mint: #d9d9d9;
+  --card: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* BTS — LOVE YOURSELF */
+html[data-theme="love-yourself"] {
+  --bg: #fff0fb;
+  --bg-soft: #f7d6ff;
+  --text: #301934;
+  --muted: #7b4f8f;
+  --pink: #ff77c8;
+  --purple: #a855f7;
+  --mint: #9fffe0;
+  --card: rgba(255, 255, 255, 0.75);
+  --border: rgba(168, 85, 247, 0.3);
+  --shadow: 0 10px 30px rgba(255, 119, 200, 0.24);
+}
+
+/* BTS — MAP OF THE SOUL */
+html[data-theme="mots"] {
+  --bg: #ffffff;
+  --bg-soft: #f2f2f2;
+  --text: #1a1a1a;
+  --muted: #8a8a8a;
+  --pink: #ff6fd8;
+  --purple: #9b5cff;
+  --mint: #36cfc9;
+  --card: rgba(255, 255, 255, 0.9);
+  --border: rgba(0, 0, 0, 0.08);
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* BTS — BE */
+html[data-theme="be"] {
+  --bg: #ffffff;
+  --bg-soft: #f2f2f2;
+  --text: #111111;
+  --muted: #777777;
+  --pink: #111111;
+  --purple: #444444;
+  --mint: #999999;
+  --card: rgba(255, 255, 255, 0.8);
+  --border: rgba(0, 0, 0, 0.14);
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* BTS — PROOF */
+html[data-theme="proof"] {
+  --bg: #000000;
+  --bg-soft: #171717;
+  --text: #ffffff;
+  --muted: #aaaaaa;
+  --pink: #ffffff;
+  --purple: #777777;
+  --mint: #cccccc;
+  --card: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.18);
+  --shadow: 0 0 24px rgba(255, 255, 255, 0.14);
+}
+
+/* =========================
+   👤 MEMBER THEMES
+========================= */
+
+html[data-theme="jimin"] {
+  --bg: #3b0000;
+  --bg-soft: #5c0000;
+  --text: #ffffff;
+  --muted: #d6a5a5;
+  --pink: #b71c1c;
+  --purple: #6a1b1b;
+  --mint: #ff6b6b;
+  --card: rgba(255, 255, 255, 0.08);
+  --border: rgba(183, 28, 28, 0.35);
+  --shadow: 0 0 25px rgba(183, 28, 28, 0.3);
+}
+
+html[data-theme="jungkook"] {
+  --bg: #2a004f;
+  --bg-soft: #4a0072;
+  --text: #ffffff;
+  --muted: #cbb6ff;
+  --pink: #9c6ade;
+  --purple: #6a1b9a;
+  --mint: #d1b3ff;
+  --card: rgba(255, 255, 255, 0.08);
+  --border: rgba(156, 106, 222, 0.35);
+  --shadow: 0 0 25px rgba(156, 106, 222, 0.3);
+}
+
+html[data-theme="v"] {
+  --bg: #2a0a0a;
+  --bg-soft: #4a1a1a;
+  --text: #ffffff;
+  --muted: #caa6a6;
+  --pink: #6b1f1f;
+  --purple: #3a0f0f;
+  --mint: #b56a6a;
+  --card: rgba(255, 255, 255, 0.06);
+  --border: rgba(107, 31, 31, 0.35);
+  --shadow: 0 0 20px rgba(107, 31, 31, 0.25);
+}
+
+html[data-theme="rm"] {
+  --bg: #e6e6e6;
+  --bg-soft: #cfcfcf;
+  --text: #1a1a1a;
+  --muted: #6a6a6a;
+  --pink: #9e9e9e;
+  --purple: #4a4a4a;
+  --mint: #d9d9d9;
+  --card: rgba(255, 255, 255, 0.85);
+  --border: rgba(0, 0, 0, 0.1);
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme="jin"] {
+  --bg: #ffe4ec;
+  --bg-soft: #ffc1d5;
+  --text: #3a1a2a;
+  --muted: #a86d8a;
+  --pink: #ff6fa5;
+  --purple: #d63384;
+  --mint: #ffd1dc;
+  --card: rgba(255, 255, 255, 0.8);
+  --border: rgba(255, 111, 165, 0.3);
+  --shadow: 0 10px 25px rgba(255, 111, 165, 0.2);
+}
+
+html[data-theme="suga"] {
+  --bg: #e8f4f8;
+  --bg-soft: #cce7f0;
+  --text: #1a2a33;
+  --muted: #6a8a9a;
+  --pink: #9bd3e0;
+  --purple: #6aa7d8;
+  --mint: #d6f0f7;
+  --card: rgba(255, 255, 255, 0.85);
+  --border: rgba(106, 167, 216, 0.3);
+  --shadow: 0 10px 25px rgba(106, 167, 216, 0.2);
+}
+
+html[data-theme="jhope"] {
+  --bg: #f5e6c8;
+  --bg-soft: #e6c98f;
+  --text: #2a1f0f;
+  --muted: #8a6a3a;
+  --pink: #d4af37;
+  --purple: #a67c00;
+  --mint: #f1d27a;
+  --card: rgba(255, 255, 255, 0.8);
+  --border: rgba(212, 175, 55, 0.3);
+  --shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+}
+
+/* =========================
+   🌌 PARTICLES
+========================= */
+
+#particles {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.nav,
+.hero,
+.section,
+footer,
+#era-indicator {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   🌊 LIQUID TRANSITION
+========================= */
+
+.liquid-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    var(--pink),
+    var(--purple),
+    transparent 70%
+  );
+  opacity: 0;
+  transform: scale(0);
+}
+
+.liquid-transition.active {
+  animation: liquidSplash 0.8s ease forwards;
+}
+
+@keyframes liquidSplash {
+  0% {
+    opacity: 0.9;
+    transform: scale(0);
+    border-radius: 50%;
+  }
+
+  60% {
+    opacity: 0.65;
+    transform: scale(1.4);
+    border-radius: 35%;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    border-radius: 0;
+  }
+}
+
+/* =========================
+   🧭 OLD NAV LAYOUT
+========================= */
+
+.nav {
+  max-width: 1100px;
+  height: 100px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--pink);
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 12px color-mix(in srgb, var(--pink) 55%, transparent);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   🎛 CONTROLS
+========================= */
+
+.theme-toggle,
+.bias-button {
+  height: 42px;
+  padding: 0 16px;
+
+  border-radius: 999px;
+  border: 1px solid var(--border);
+
+  background: color-mix(in srgb, var(--card) 85%, transparent);
+  color: var(--text);
+
+  font-family: inherit;
+  font-weight: 700;
+
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.3s ease,
+    background 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.theme-toggle:hover,
+.bias-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px color-mix(in srgb, var(--pink) 45%, transparent);
+}
+
+.theme-toggle:focus,
+.bias-button:focus {
+  outline: none;
+  border-color: var(--mint);
+}
+
+.theme-toggle option,
+.theme-toggle optgroup {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+body.bias-mode #bias-mode,
+body.music-mode #music-mode,
+body.era-mode #era-mode {
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  color: #fff;
+  border-color: var(--mint);
+}
+
+/* =========================
+   🧠 OLD HERO LAYOUT
+========================= */
+
+.hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.hero__content {
+  padding: 40px;
+  border-radius: 32px;
+
+  background: color-mix(in srgb, var(--card) 85%, transparent);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.eyebrow {
+  color: var(--mint);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.bora-title {
+  font-size: clamp(48px, 8vw, 96px);
+  background: linear-gradient(135deg, var(--pink), var(--purple), var(--mint));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px color-mix(in srgb, var(--pink) 35%, transparent);
+}
+
+.hero__text {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+/* =========================
+   💜 SECTIONS
+========================= */
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.section__title {
+  margin-bottom: 24px;
+  color: var(--pink);
+  font-size: 36px;
+  text-shadow: 0 0 12px color-mix(in srgb, var(--pink) 55%, transparent);
+}
+
+/* =========================
+   📦 OLD CARD GRID
+========================= */
+
+.shortcut-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.shortcut-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 20px;
+  border-radius: 20px;
+
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+
+  color: var(--muted);
+
+  transition:
+    transform 0.3s ease,
+    background 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.shortcut-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.shortcut-card code {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  background: color-mix(in srgb, var(--mint) 18%, transparent);
+  color: var(--mint);
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* FIXED GRADIENT TEXT (GRADTEXT) */
+.shortcut-card code.gradtext-demo {
+  /* remove pill style */
+  background: none;
+  padding: 0;
+
+  /* gradient text */
+  background-image: linear-gradient(
+    135deg,
+    var(--pink),
+    var(--purple),
+    var(--mint)
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  display: inline-block;
+
+  /* glow */
+  filter: drop-shadow(
+    0 0 6px color-mix(in srgb, var(--pink) 40%, transparent)
+  );
+}
+
+.shortcut-card p {
+  line-height: 1.6;
+}
+
+/* =========================
+   ✨ SPECIAL DEMOS
+========================= */
+
+.softglow-demo {
+  box-shadow: 0 0 24px color-mix(in srgb, var(--pink) 35%, transparent);
+}
+
+.neonhover-demo:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 26px color-mix(in srgb, var(--mint) 45%, transparent);
+}
+
+.glowborder-demo {
+  border: 1px solid color-mix(in srgb, var(--mint) 50%, var(--border));
+  box-shadow: 0 0 20px color-mix(in srgb, var(--mint) 30%, transparent);
+}
+
+.pulseglow-demo {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 16px color-mix(in srgb, var(--pink) 25%, transparent);
+  }
+
+  50% {
+    box-shadow: 0 0 34px color-mix(in srgb, var(--mint) 40%, transparent);
+  }
+}
+
+/* =========================
+   🎨 THEME OPTIONAL STYLES
+========================= */
+
+/* Hope World */
+html[data-theme="hope-world"] body {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255, 214, 0, 0.4), transparent 30%),
+    radial-gradient(circle at 70% 30%, rgba(0, 230, 118, 0.4), transparent 30%),
+    radial-gradient(
+      circle at 50% 80%,
+      rgba(124, 77, 255, 0.4),
+      transparent 30%
+    ),
+    linear-gradient(180deg, #ff1744, #ff5e00);
+}
+
+html[data-theme="hope-world"] .bora-title {
+  background: linear-gradient(135deg, #ffd600, #00e676, #7c4dff, #00b0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Jack in the Box */
+html[data-theme="jack-box"] body {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0, 200, 83, 0.32), transparent 28%),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(0, 188, 212, 0.32),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 60% 80%,
+      rgba(124, 77, 255, 0.32),
+      transparent 28%
+    ),
+    linear-gradient(180deg, #e1062b, #b80422);
+}
+
+html[data-theme="jack-box"] .bora-title {
+  background: linear-gradient(135deg, #ffffff, #00c853, #00bcd4, #7c4dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html[data-theme="jack-box"] .shortcut-card {
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.25);
+}
+
+html[data-theme="jack-box"] .shortcut-card:hover {
+  transform: translateY(-6px) scale(1.03) rotate(-1deg);
+}
+
+/* Jack Hope Edition */
+html[data-theme="jack-hope"] body {
+  background: radial-gradient(circle at center, #111, #000 70%);
+}
+
+/* Agust D */
+html[data-theme="agust-d"] .bora-title {
+  background: linear-gradient(135deg, #111111, #4a4a4a, #6aa7d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html[data-theme="agust-d"] .shortcut-card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(17, 17, 17, 0.25);
+}
+
+/* D-DAY */
+html[data-theme="d-day"] body {
+  background: radial-gradient(circle at center, #1a1a1a, #0d0d0d 70%);
+}
+
+html[data-theme="d-day"] .bora-title {
+  background: linear-gradient(135deg, #ffffff, #cfcfcf, #7a7a7a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html[data-theme="d-day"] .shortcut-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(200, 200, 200, 0.18);
+}
+
+/* FACE */
+html[data-theme="face"] body {
+  background: linear-gradient(180deg, #ffffff, #f2f2f2, #e4e4e4);
+}
+
+html[data-theme="face"] .bora-title {
+  background: linear-gradient(135deg, #1a1a1a, #bdbdbd, #f2c6cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html[data-theme="face"] .shortcut-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* MUSE */
+html[data-theme="muse"] body {
+  background: linear-gradient(
+    90deg,
+    #80cbc4 0%,
+    #80cbc4 50%,
+    #ffd54f 50%,
+    #ffd54f 100%
+  );
+}
+
+html[data-theme="muse"] .bora-title {
+  background: linear-gradient(135deg, #ff7043, #26c6da, #7c4dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* GOLDEN */
+html[data-theme="golden"] .bora-title {
+  background: linear-gradient(135deg, #0f4a3a, #b88a2c, #12324a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* LAYOVER */
+html[data-theme="layover"] body {
+  background:
+    linear-gradient(180deg, #efe4d1, #e2d3ba),
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.02) 0px,
+      rgba(0, 0, 0, 0.02) 1px,
+      transparent 1px,
+      transparent 6px
+    );
+}
+
+html[data-theme="layover"] .bora-title {
+  background: linear-gradient(135deg, #2a2118, #7e57c2, #2e7d32, #1976d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html[data-theme="layover"] .shortcut-card {
+  background: rgba(255, 248, 235, 0.9);
+  border: 1px solid rgba(122, 106, 88, 0.3);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transform: rotate(-0.5deg);
+}
+
+html[data-theme="layover"] .shortcut-card:nth-child(2) {
+  transform: rotate(1deg);
+}
+
+html[data-theme="layover"] .shortcut-card:nth-child(3) {
+  transform: rotate(-1deg);
+}
+
+/* ARIRANG */
+html[data-theme="arirang"] body {
+  background: linear-gradient(180deg, #ffffff, #f2f2f2, #e4e4e4);
+}
+
+html[data-theme="arirang"] .bora-title {
+  background: linear-gradient(135deg, #1a1a1a, #b71c1c, #d4af37, #4a4a4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* WINGS */
+html[data-theme="wings"] body {
+  background: radial-gradient(circle at center, #1a1a1a, #050505 70%);
+}
+
+html[data-theme="wings"] .bora-title {
+  background: linear-gradient(135deg, #ffffff, #d9d9d9, #7a7a7a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* LOVE YOURSELF */
+html[data-theme="love-yourself"] body {
+  background:
+    linear-gradient(180deg, #fff0fb, #f7d6ff),
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(255, 119, 200, 0.25),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 40%,
+      rgba(168, 85, 247, 0.25),
+      transparent 40%
+    );
+}
+
+html[data-theme="love-yourself"] .bora-title {
+  background: linear-gradient(135deg, #ff77c8, #a855f7, #9fffe0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* MAP OF THE SOUL */
+html[data-theme="mots"] body {
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(255, 111, 216, 0.2),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 70% 30%,
+      rgba(54, 207, 201, 0.2),
+      transparent 40%
+    ),
+    linear-gradient(180deg, #ffffff, #f5f5f5);
+}
+
+html[data-theme="mots"] .bora-title {
+  background: linear-gradient(135deg, #ff6fd8, #36cfc9, #9b5cff, #ff6fd8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================
+   🧍 BIAS MODE
+========================= */
+
+body[data-bias="jhope"].bias-mode .logo::after {
+  content: " 🐿️";
+}
+
+body[data-bias="jin"].bias-mode .logo::after {
+  content: " 🐹";
+}
+
+body[data-bias="rm"].bias-mode .logo::after {
+  content: " 🐨";
+}
+
+body[data-bias="suga"].bias-mode .logo::after {
+  content: " 🐱";
+}
+
+body[data-bias="jimin"].bias-mode .logo::after {
+  content: " 🐥";
+}
+
+body[data-bias="v"].bias-mode .logo::after {
+  content: " 🐯";
+}
+
+body[data-bias="jk"].bias-mode .logo::after {
+  content: " 🐰";
+}
+
+/* =========================
+   🎧 MUSIC MODE
+========================= */
+
+body.music-mode .bora-title {
+  animation: musicPulse 0.8s ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.045);
+  }
+}
+
+/* =========================
+   💜 FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  padding: 40px 24px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  background: color-mix(in srgb, var(--card) 60%, transparent);
+  backdrop-filter: blur(16px);
+}
+
+/* =========================
+   📱 RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+  .nav {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 24px;
+    gap: 16px;
+  }
+
+  .nav__links {
+    justify-content: center;
+  }
+
+  .theme-toggle,
+  .bias-button {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .hero {
+    padding: 56px 24px;
+  }
+
+  .hero__content {
+    padding: 28px;
+  }
+
+  .bora-title {
+    font-size: 48px;
+  }
+}
+
+html[data-theme="face"] .shortcut-card code.gradtext-demo,
+html[data-theme="mots"] .shortcut-card code.gradtext-demo,
+html[data-theme="arirang"] .shortcut-card code.gradtext-demo {
+  filter: drop-shadow(
+    0 0 4px color-mix(in srgb, var(--text) 30%, transparent)
+  );
+}
+
+
+/* =========================
+   👑 FINAL BOSS EFFECTS
+========================= */
+
+.gradtext-demo {
+  background-size: 250% 250%;
+  animation: gradientShimmer 3s ease infinite;
+  transition:
+    filter 0.3s ease,
+    transform 0.3s ease;
+}
+
+.gradtext-demo:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(
+    0 0 14px color-mix(in srgb, var(--mint) 65%, transparent)
+  );
+}
+
+@keyframes gradientShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* MOTS = extra holographic */
+html[data-theme="mots"] .gradtext-demo {
+  background-image: linear-gradient(
+    135deg,
+    #ff6fd8,
+    #36cfc9,
+    #9b5cff,
+    #ffffff,
+    #ff6fd8
+  );
+  filter: drop-shadow(0 0 10px rgba(155, 92, 255, 0.35));
+}
+
+/* ARIRANG = metallic */
+html[data-theme="arirang"] .gradtext-demo {
+  background-image: linear-gradient(
+    135deg,
+    #c0c0c0,
+    #b71c1c,
+    #d4af37,
+    #ffffff
+  );
+  filter: drop-shadow(0 0 8px rgba(183, 28, 28, 0.25));
+}
+
+/* GOLDEN = luxury shimmer */
+html[data-theme="golden"] .gradtext-demo {
+  background-image: linear-gradient(
+    135deg,
+    #0f4a3a,
+    #b88a2c,
+    #fff0b3,
+    #12324a
+  );
+}
+
+/* =========================
+   👑 ULTRA EFFECTS
+========================= */
+
+/* BASE SHIMMER TEXT */
+.gradtext-demo {
+  position: relative;
+  background-size: 250% 250%;
+  animation: gradientShimmer 4s ease infinite;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+/* SHIMMER SWEEP */
+.gradtext-demo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+
+  transform: translateX(-100%);
+  animation: shimmerSweep 3.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* GRADIENT FLOW */
+@keyframes gradientShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* HOVER = POP */
+.gradtext-demo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(
+    0 0 16px color-mix(in srgb, var(--mint) 70%, transparent)
+  );
+}
+
+/* =========================
+   🌈 MOTS (HOLOGRAPHIC++)
+========================= */
+
+html[data-theme="mots"] .gradtext-demo {
+  background-image: linear-gradient(
+    135deg,
+    #ff6fd8,
+    #36cfc9,
+    #9b5cff,
+    #ffffff,
+    #36cfc9,
+    #ff6fd8
+  );
+
+  filter: drop-shadow(0 0 12px rgba(155, 92, 255, 0.4));
+}
+
+/* =========================
+   💿 ARIRANG (VINYL SHINE)
+========================= */
+
+html[data-theme="arirang"] .gradtext-demo {
+  background-image: linear-gradient(
+    135deg,
+    #c0c0c0,
+    #b71c1c,
+    #d4af37,
+    #ffffff,
+    #b71c1c
+  );
+}
+
+/* spinning light reflection */
+html[data-theme="arirang"] .gradtext-demo::after {
+  animation: vinylSweep 4s linear infinite;
+}
+
+@keyframes vinylSweep {
+  0% {
+    transform: rotate(0deg) translateX(-100%);
+  }
+  100% {
+    transform: rotate(360deg) translateX(100%);
+  }
+}
+
+/* =========================
+   🏆 GOLDEN (LUXURY GLOW)
+========================= */
+
+html[data-theme="golden"] .gradtext-demo {
+  background-image: linear-gradient(
+    135deg,
+    #0f4a3a,
+    #b88a2c,
+    #fff0b3,
+    #b88a2c,
+    #12324a
+  );
+
+  filter: drop-shadow(0 0 14px rgba(184, 138, 44, 0.4));
+}
+
+/* =========================
+   🎧 MUSIC MODE BOOST
+========================= */
+
+body.music-mode .gradtext-demo {
+  animation: gradientShimmer 1.5s ease infinite;
+}
+
+body.music-mode .gradtext-demo::after {
+  animation: shimmerSweep 1.2s infinite;
+}
+
+#era-indicator {
+  position: fixed;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+
+  padding: 8px 18px;
+  border-radius: 999px;
+
+  background: var(--card);
+  border: 1px solid var(--border);
+
+  color: var(--text);
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: all 0.4s ease;
+}
+
+/* SHOW WHEN ACTIVE */
+body.era-mode #era-indicator {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+
+  box-shadow: 0 0 20px color-mix(in srgb, var(--pink) 40%, transparent);
+}
+
+/* =========================
+   💜 BIAS MODE CRAZY
+========================= */
+
+body.bias-mode {
+  filter: saturate(1.15);
+}
+
+body.bias-mode .hero__content {
+  box-shadow:
+    0 0 24px color-mix(in srgb, var(--pink) 45%, transparent),
+    0 0 48px color-mix(in srgb, var(--purple) 35%, transparent);
+}
+
+body.bias-mode .shortcut-card {
+  border-color: var(--pink);
+}
+
+body.bias-mode .shortcut-card:hover {
+  box-shadow:
+    0 0 18px color-mix(in srgb, var(--pink) 45%, transparent),
+    0 0 34px color-mix(in srgb, var(--mint) 25%, transparent);
+}
+
+body.bias-mode #bias-mode {
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  color: #fff;
+  border-color: var(--mint);
+  box-shadow:
+    0 0 14px color-mix(in srgb, var(--pink) 60%, transparent),
+    0 0 28px color-mix(in srgb, var(--purple) 45%, transparent);
+}
+
+/* Bias emojis */
+body[data-bias="jhope"].bias-mode .logo::after {
+  content: " 🐿️";
+}
+
+body[data-bias="jin"].bias-mode .logo::after {
+  content: " 🐹";
+}
+
+body[data-bias="rm"].bias-mode .logo::after {
+  content: " 🐨";
+}
+
+body[data-bias="suga"].bias-mode .logo::after {
+  content: " 🐱";
+}
+
+body[data-bias="jimin"].bias-mode .logo::after {
+  content: " 🐥";
+}
+
+body[data-bias="v"].bias-mode .logo::after {
+  content: " 🐯";
+}
+
+body[data-bias="jk"].bias-mode .logo::after {
+  content: " 🐰";
+}
+
+/* Bias message */
+body.bias-mode .hero__text::after {
+  display: block;
+  margin-top: 12px;
+  font-weight: 700;
+  color: var(--mint);
+}
+
+body[data-bias="jhope"].bias-mode .hero__text::after {
+  content: "Hope mode activated 🐿️";
+}
+
+body[data-bias="jin"].bias-mode .hero__text::after {
+  content: "Worldwide handsome mode activated 🐹";
+}
+
+body[data-bias="rm"].bias-mode .hero__text::after {
+  content: "Leader mode activated 🐨";
+}
+
+body[data-bias="suga"].bias-mode .hero__text::after {
+  content: "Agust mode activated 🐱";
+}
+
+body[data-bias="jimin"].bias-mode .hero__text::after {
+  content: "Serendipity mode activated 🐥";
+}
+
+body[data-bias="v"].bias-mode .hero__text::after {
+  content: "Layover mode activated 🐯";
+}
+
+body[data-bias="jk"].bias-mode .hero__text::after {
+  content: "Golden mode activated 🐰";
+}
+
+/* =========================
+   ✨ GLOBAL EFFECT FIX
+========================= */
+
+html[data-theme] .bora-title,
+html[data-theme] .gradtext-demo {
+  background-size: 250% 250%;
+  animation: gradientShimmer 4s ease infinite;
+}
+
+html[data-theme] .shortcut-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+html[data-theme] .shortcut-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow:
+    0 0 18px color-mix(in srgb, var(--pink) 35%, transparent),
+    0 0 32px color-mix(in srgb, var(--mint) 22%, transparent);
+}
+
+html[data-theme] .softglow-demo {
+  box-shadow: 0 0 24px color-mix(in srgb, var(--pink) 40%, transparent);
+}
+
+html[data-theme] .neonhover-demo:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow:
+    0 0 22px color-mix(in srgb, var(--pink) 45%, transparent),
+    0 0 36px color-mix(in srgb, var(--mint) 35%, transparent);
+}
+
+html[data-theme] .glowborder-demo {
+  border-color: color-mix(in srgb, var(--mint) 55%, var(--border));
+  box-shadow: 0 0 20px color-mix(in srgb, var(--mint) 32%, transparent);
+}
+
+html[data-theme] .pulseglow-demo {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+html[data-theme] .theme-toggle:hover,
+html[data-theme] .bias-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px color-mix(in srgb, var(--pink) 45%, transparent);
+}
+
+body.bias-mode .shortcut-card {
+  border-color: var(--pink);
+}
+
+body.music-mode .bora-title {
+  animation: musicPulse 0.8s ease-in-out infinite;
+}
+
+@keyframes gradientShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
