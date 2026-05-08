@@ -580,6 +580,7 @@ body.era-mode #era-mode {
 ========================= */
 
 .hero {
+  display: none;
   max-width: 900px;
   margin: 0 auto;
   padding: 80px 24px;
@@ -1320,6 +1321,7 @@ body.music-mode .gradtext-demo::after {
 body.era-mode #era-indicator {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+  display: block;
 
   box-shadow: 0 0 20px color-mix(in srgb, var(--pink) 40%, transparent);
 }
